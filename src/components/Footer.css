@@ -1,0 +1,127 @@
+.footer-wrap {
+  background: #1f2937; /* dark gray background */
+  color: #e5e7eb; /* light text */
+  padding: 3rem 0 1rem 0;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-section ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #7c3aed;
+}
+
+.footer-section .social-icons a {
+  margin-right: 1rem;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-section .social-icons a:hover {
+  color: #7c3aed;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #374151;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 0;
+}
+.social-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 1.2rem; /* icon size */
+}
+
+.social-icons a {
+  color: #fff; /* or your brand color */
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+  color: #fff;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem; 
+    align-items: flex-start; 
+  }
+
+  .footer-section {
+    flex: 1 1 auto; 
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 0.5rem; 
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.4rem; 
+  }
+
+  .social-icons {
+    justify-content: flex-start; 
+    gap: 10px;
+  }
+}
+

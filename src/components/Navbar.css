@@ -1,0 +1,134 @@
+/* Navbar.css */
+
+/* Navbar wrapper */
+.nav-wrap {
+  width: 100%;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.8rem 2rem;
+}
+
+/* Flex row */
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand / Logo */
+.brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.brand:hover {
+  transform: scale(1.08);
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* Common link style (Home, Products, Cart) */
+.nav-link,
+.nav-cart {
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  background: none;       /* ✅ no background */
+  border: none;           /* ✅ no border */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.nav-link:hover,
+.nav-cart:hover {
+  background: rgba(255, 255, 255, 0.15);  /* soft glow */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Mobile Responsive Navbar
+   ========================= */
+@media (max-width: 768px) {
+  /* Hide links initially */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+    width: 200px;
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* Show when active */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger animation when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+}
+
+/* Desktop view: hide hamburger, show links */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}

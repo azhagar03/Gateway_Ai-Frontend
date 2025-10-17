@@ -1,0 +1,32 @@
+/* Global / Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffffff; /* clean white background */
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+/* Layout container */
+.container { width: min(1200px, 92%); margin: 0 auto; }
+
+/* Tiny helpers */
+.flex { display:flex; align-items:center; gap:12px; }
+.center { display:flex; align-items:center; justify-content:center; }
+
+/* Animations */
+@keyframes fadeUp { from {opacity:0; transform: translateY(12px)} to {opacity:1; transform:translateY(0)} }
+.fade-up { animation: fadeUp .5s ease both; }
+
+/* Buttons base */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:8px; border-radius:10px; padding:.6rem 1rem; font-weight:600; cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: none;
+}

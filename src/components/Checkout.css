@@ -1,0 +1,220 @@
+/* ------------------ Checkout Page ------------------ */
+.checkout-page {
+  padding: 28px 0 80px;
+}
+
+.checkout-title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* Grid layout: form + order summary */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+/* Form Styling */
+.checkout-form {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(17, 24, 39, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.pay-btn,
+.apply-btn {
+  padding: 12px;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.pay-btn:hover,
+.apply-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Coupon row */
+.checkout-form .coupon-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.checkout-form .coupon-row input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+}
+
+.checkout-form .coupon-row button.apply-btn {
+  flex-shrink: 0;
+}
+
+/* Order Summary Styling */
+.order-summary {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(17, 24, 39, 0.04);
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+  color: #475569;
+}
+
+.summary-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.summary-info {
+  flex: 1;
+}
+
+.summary-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.summary-qty {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.summary-price {
+  font-weight: 600;
+  color: #111827;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-weight: 800;
+}
+
+/* ------------------ Responsive ------------------ */
+
+/* Small devices (mobiles) */
+@media (max-width: 767px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-form,
+  .order-summary {
+    width: 100%;
+  }
+
+  .checkout-form .coupon-row {
+    flex-direction: column;
+  }
+
+  .checkout-form .coupon-row button.apply-btn {
+    width: 100%;
+  }
+
+  .checkout-form input,
+  .checkout-form select {
+    width: 100%;
+  }
+
+  .checkout-form div[style*="display: flex"] {
+    flex-direction: column;
+  }
+
+  .checkout-form div[style*="display: flex"] label {
+    width: 100%;
+  }
+
+  .pay-btn {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .checkout-grid {
+    grid-template-columns: 1fr 300px;
+    gap: 16px;
+  }
+
+  .checkout-form div[style*="display: flex"] {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .checkout-form div[style*="display: flex"] label {
+    flex: 1;
+  }
+
+  .checkout-form input,
+  .checkout-form select {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .pay-btn {
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1024px) {
+  .checkout-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 18px;
+  }
+
+  .checkout-form div[style*="display: flex"] {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .checkout-form input,
+  .checkout-form select {
+    font-size: 1rem;
+  }
+
+  .pay-btn {
+    font-size: 1.05rem;
+  }
+}
