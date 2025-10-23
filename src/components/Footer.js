@@ -26,6 +26,7 @@ export default function Footer() {
         <div className="footer-section contact">
           <h4>Contact</h4>
           <p>Email: gatewayai2025@gmail.com</p>
+          <p>Email: +91 9042707229</p>
         </div>
 
         <div className="footer-section social">
