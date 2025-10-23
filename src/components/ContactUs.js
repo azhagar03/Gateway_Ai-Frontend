@@ -30,7 +30,7 @@ const ContactUs = ({ sessionId }) => {
           <p>We would love to hear from you! Send us a message and we will get back to you as soon as possible.</p>
           <div className="contact-info">
             <div className="info-item"><strong>Email:</strong> gatewayai2025@gmail.com</div>
-           
+           <div className="info-item"><strong>Email:</strong> +91 9042707229</div>
           </div>
         </div>
       <ToastContainer position="top-right" autoClose={3000} />
